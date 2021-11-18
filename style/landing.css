@@ -24,6 +24,7 @@ body {
 @media (min-width: 1313px) {
     body {
         font-size: 140%;
+
     }
 }
 
@@ -124,7 +125,8 @@ main {
     width: 100%;
     display: flex;
     align-items: center;
-    margin-top: 160px;
+    margin-top: 170px;
+    margin-bottom: 157px;
 }
 
 
@@ -150,9 +152,9 @@ main {
     font-style: normal;
     font-weight: normal;
     font-size: 64px;
-    line-height: 95px;
     color: #FFCC00;
     text-align: center;
+    margin-bottom: 4px;
 }
 
 .coordination-party-hero-description .subtitle {
@@ -505,8 +507,8 @@ hr {
     align-items: center;
 }
 
-.review-coordenation .review-card .review-title{
-    color:#FFCC00;
+.review-coordenation .review-card .review-title {
+    color: #FFCC00;
     font-size: 64px;
 }
 
@@ -514,6 +516,7 @@ hr {
     color: #6F3FF5;
 
 }
+
 .coord-yellow {
     color: #FFCC00;
 }
@@ -547,8 +550,9 @@ hr {
     text-align: center;
     list-style: none;
 }
+
 .coordenation-card {
-    
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -564,14 +568,16 @@ hr {
 }
 
 .coordenation-card:hover {
-    background-color:#0E0333;
-    color: #FFCC00; 
+    background-color: #0E0333;
+    color: #FFCC00;
 }
 
 .coordenation-card_image .tip-box>path:hover {
     fill: #FFCC00;
 }
-a .tip-box:hover, a img .tip-box>path {
+
+a .tip-box:hover,
+a img .tip-box>path {
     fill: #FFCC00;
     color: #FFCC00;
 }
@@ -581,7 +587,7 @@ a .tip-box:hover, a img .tip-box>path {
 a img svg:hover #pay,
 a img svg:hover #grant,
 a img svg:hover #tokenstream,
-a img svg:hover #recruiter { 
+a img svg:hover #recruiter {
     fill: #FFCC00;
 }
 
@@ -627,7 +633,12 @@ a img svg:hover #recruiter {
     }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1095px) {
+
+    .header-nav-menu {
+        width: 80vw;
+    }
+
     section.section-container figure {
         width: 50%;
     }
@@ -649,7 +660,7 @@ a img svg:hover #recruiter {
     }
 }
 
-@media (max-width: 688px) {
+@media (max-width: 750px) {
     header {
         margin: 0;
         display: flex;
@@ -657,9 +668,13 @@ a img svg:hover #recruiter {
         justify-content: center;
     }
 
-    .schelling-hero {
-        display: flex;
-        flex-direction: column;
+    .coordination-party-hero-description .title {
+        font-size: 5.9vh;
+    }
+
+    .coordination-party-hero-description .subtitle {
+
+        font-size: 2.9vh;
 
     }
 
@@ -685,21 +700,30 @@ a img svg:hover #recruiter {
     }
 
     .header-nav-menu {
-        flex-direction: column;
+        /* flex-direction: column; */
         margin: 10px;
     }
 
     .header-nav-menu li {
-        margin-bottom: 10px;
+        margin: 10px;
     }
+
+    .coordination-party-hero-description .title {
+        font-size: 22px;
+    }
+
+    .coordination-party-hero-description .subtitle {
+        font-size: 18px;
+    }
+
 
     .hero-container,
     .section-container {
-        margin-top: 50px;
+        margin: 85px 0;
     }
 
     .speakers-container .title {
-        margin-bottom: 50px;
+        margin-bottom: 4px;
     }
 
     .schelling-hero-description .title,
