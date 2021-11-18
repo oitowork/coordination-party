@@ -507,8 +507,8 @@ hr {
     align-items: center;
 }
 
-.review-coordination .review-card .review-title{
-    color:#FFCC00;
+.review-coordination .review-card .review-title {
+    color: #FFCC00;
     font-size: 64px;
 }
 
@@ -532,18 +532,15 @@ hr {
 
 
 .coordination-players {
-    display: flex;
     align-content: center;
-    justify-content:center;
-    margin-top: 175px;
+    justify-content: center;
     margin-bottom: 242px;
-    margin-left: 20%;
-    margin-right:20% ;
 }
 
 .coordination-box-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     gap: 30px 100px;
     align-items: center;
 }
@@ -553,7 +550,35 @@ hr {
     justify-content: center;
     text-align: center;
     list-style: none;
+    justify-self: center;
 }
+
+
+
+.coordination-box-list li:nth-child(1) {
+    grid-area: 1 / 1 / 3 / 3;
+}
+
+.coordination-box-list li:nth-child(2) {
+    grid-area: 1 / 3 / 3 / 5;
+}
+
+.coordination-box-list li:nth-child(3) {
+    grid-area: 1 / 5 / 3 / 7;
+}
+
+.coordination-box-list li:nth-child(4) {
+    grid-area: 3 / 1 / 5 / 4;
+    justify-self: end;
+
+}
+
+.coordination-box-list li:nth-child(5) {
+    grid-area: 3 / 4 / 5 / 7;
+    justify-self: start;
+
+}
+
 .coordination-card {
     display: flex;
     flex-direction: column;
@@ -570,8 +595,8 @@ hr {
 }
 
 .coordination-card:hover {
-    background-color:#0E0333;
-    color: #FFCC00; 
+    background-color: #0E0333;
+    color: #FFCC00;
 }
 
 .coordination-card_image .tip-box>path:hover {
@@ -593,47 +618,55 @@ a img .tip-box>path {
 }
 
 
-.coord-pay{
-    width: 118px; 
-    height:160px;
+.coord-pay {
+    width: 118px;
+    height: 160px;
     background-image: url(../image/pay-box.svg)
 }
-.coord-pay:hover{
+
+.coord-pay:hover {
     background-image: url(../image/pay-box-hover.svg)
 }
 
-.coord-recruiter{
-    width: 162px; 
+.coord-recruiter {
+    width: 162px;
     height: 160px;
     background-image: url(../image/recruit-box.svg)
 }
-.coord-recruiter:hover{
+
+.coord-recruiter:hover {
     background-image: url(../image/recruit-box-hover.svg)
 }
 
-.coord-tip{
-    width: 160px; 
-    height:160px;
+.coord-tip {
+    width: 160px;
+    height: 160px;
     background-image: url(../image/tip-box.svg)
 }
-.coord-tip:hover{
+
+.coord-tip:hover {
     background-image: url(../image/tip-box-hover.svg)
 }
 
-.coord-grant{
-    width: 179px; 
-    height:160px;
-    background-image: url(../image/grant-box.svg)}
-.coord-grant:hover{
+.coord-grant {
+    width: 179px;
+    height: 160px;
+    background-image: url(../image/grant-box.svg)
+}
+
+.coord-grant:hover {
     background-image: url(../image/grant-box-hover.svg)
 }
 
-.coord-tokenstream{
-    width: 205px; 
-    height:160px;
-    background-image: url(../image/token-stream-box.svg)}
-.coord-tokenstream:hover{
-    background-image: url(../image/token-stream-box-hover.svg)}
+.coord-tokenstream {
+    width: 205px;
+    height: 160px;
+    background-image: url(../image/token-stream-box.svg)
+}
+
+.coord-tokenstream:hover {
+    background-image: url(../image/token-stream-box-hover.svg)
+}
 
 .review-coordination {
     display: flex;
@@ -644,6 +677,7 @@ a img .tip-box>path {
 .review-card {
     text-align: center;
 }
+
 .review-title {
     margin-bottom: 60px;
     font-style: normal;
@@ -655,9 +689,10 @@ a img .tip-box>path {
 }
 
 .review-description {
-    margin: 0 431px 10px;
+    width: 738px;
     color: #C9B8FF;
     font-style: italic;
+    margin: 0 auto;
     font-size: 24px;
     text-align: center;
 }
@@ -667,11 +702,50 @@ a img .tip-box>path {
     color: #6F3FF5;
 }
 
-.review-author{
+.review-author {
     justify-content: center;
 }
 
 /* Responsive Style */
+
+@media (max-width: 1420px) {
+
+
+
+    .coordination-box-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        gap: 0;
+    }
+
+    .coordination-box-list li:nth-child(1) {
+        grid-area: 1 / 1 / 3 / 3;
+    }
+
+    .coordination-box-list li:nth-child(2) {
+        grid-area: 1 / 3 / 3 / 5;
+    }
+
+    .coordination-box-list li:nth-child(3) {
+        grid-area: 3 / 1 / 5 / 3;
+    }
+
+    .coordination-box-list li:nth-child(4) {
+        grid-area: 3 / 3 / 5 / 5;
+        justify-self: center;
+
+    }
+
+    .coordination-box-list li:nth-child(5) {
+        grid-area: 5 / 2 / 7 / 4;
+        justify-self: center;
+        margin-top: 30px;
+
+    }
+
+}
+
 @media (max-width: 1280px) {
 
     /*coordination.party*/
@@ -739,7 +813,42 @@ a img .tip-box>path {
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 900px) {
+    .coordination-box-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .coordination-box-list li:nth-child(1) {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .coordination-box-list li:nth-child(2) {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .coordination-box-list li:nth-child(3) {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+    .coordination-box-list li:nth-child(4) {
+        grid-area: 4 / 1 / 5 / 2;
+        justify-self: center;
+
+    }
+
+    .coordination-box-list li:nth-child(5) {
+        grid-area: 5 / 1 / 6 / 2;
+        justify-self: center;
+        margin-top: 0px;
+    }
+
+}
+
+@media (max-width: 760px) {
     header {
         margin: 0;
         display: flex;
@@ -748,13 +857,11 @@ a img .tip-box>path {
     }
 
     .coordination-party-hero-description .title {
-        font-size: 5.9vh;
+        font-size: 5.5vh;
     }
 
     .coordination-party-hero-description .subtitle {
-
         font-size: 2.9vh;
-
     }
 
     section.sponsors-container figure {
@@ -767,6 +874,10 @@ a img .tip-box>path {
     #hero-version-2 {
         height: 120vh;
         background-size: 414px;
+    }
+
+    .review-description {
+        width: 100%;
     }
 }
 
@@ -793,6 +904,19 @@ a img .tip-box>path {
 
     .coordination-party-hero-description .subtitle {
         font-size: 18px;
+    }
+
+    .coordination-players {
+        margin-bottom: 121px;
+    }
+
+    .coordination-card {
+        width: 85vw;
+        height: 250px;
+    }
+
+    .review-coordination {
+        padding: 0 3%;
     }
 
 
@@ -839,6 +963,10 @@ a img .tip-box>path {
         padding: 0;
         align-items: center;
         margin-left: 0;
+    }
+
+    .gitcoin-brand {
+        padding-top: 0;
     }
 
 }
