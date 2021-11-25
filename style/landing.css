@@ -566,13 +566,24 @@ hr {
 }
 
 .coordination-box-list li:nth-child(4) {
-    grid-area: 3 / 1 / 5 / 4;
+    grid-area: 3 / 1 / 5 / 3;
     justify-self: end;
 
 }
 
 .coordination-box-list li:nth-child(5) {
-    grid-area: 3 / 4 / 5 / 7;
+    grid-area: 3 / 3 / 5 / 5;
+    justify-self: start;
+
+}
+
+.coordination-box-list li:nth-child(6) {
+    grid-area: 3 / 5 / 5 / 7;
+    justify-self: start;
+
+}
+.coordination-box-list li:nth-child(7) {
+    grid-area: 5 / 1 / 5 / 3;
     justify-self: start;
 
 }
@@ -589,6 +600,11 @@ hr {
 }
 
 .coordination-card_title {
+    color: #C9B8FF;
+}
+
+.coordination-card_subtitle {
+    margin-top: 5px;
     color: #C9B8FF;
 }
 
@@ -785,7 +801,7 @@ hr {
     }
 
     .coordination-box-list li:nth-child(5) {
-        grid-area: 5 / 2 / 7 / 4;
+        grid-area: 5 / 2 / 5 / 4;
         justify-self: center;
         margin-top: 30px;
 
