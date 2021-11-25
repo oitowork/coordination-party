@@ -588,6 +588,10 @@ hr {
 
 }
 
+.partyon{
+    color: white;
+}
+
 .coordination-card {
     display: flex;
     flex-direction: column;
