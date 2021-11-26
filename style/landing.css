@@ -19,6 +19,7 @@ body {
     margin: auto;
     background-color: #0E0333;
     color: #fff;
+    overflow-x: hidden;
 }
 
 @media (min-width: 1313px) {
@@ -416,6 +417,14 @@ footer {
 
 .gitcoin-brand img {
     width: 178px;
+    transform: translateY(0);
+    transition: transform 0.5s;
+
+}
+
+.gitcoin-brand img:hover {
+    transform: translateY(-3px);
+    filter: brightness(0.85);
 }
 
 /* Start HR Style */
@@ -586,6 +595,8 @@ hr {
     background-color: rgba(111, 63, 245, 0.2);
     padding: 30px;
     align-items: center;
+    cursor: pointer;
+    transition: background-color 0.75s;
 }
 
 .coordination-card_title {
@@ -678,7 +689,9 @@ hr {
     height: 160px;
     background-image: url(../image/pay-box.svg)
 }
-.coord-pay:hover, .coordination-card:hover a .coord-icon.coord-pay{
+
+.coord-pay:hover,
+.coordination-card:hover a .coord-icon.coord-pay {
     background-image: url(../image/pay-box-hover.svg)
 }
 
@@ -687,7 +700,9 @@ hr {
     height: 160px;
     background-image: url(../image/recruit-box.svg)
 }
-.coord-recruiter:hover, .coordination-card:hover a .coord-icon.coord-recruiter{
+
+.coord-recruiter:hover,
+.coordination-card:hover a .coord-icon.coord-recruiter {
     background-image: url(../image/recruit-box-hover.svg)
 }
 
@@ -697,15 +712,19 @@ hr {
     background-image: url(../image/tip-box.svg)
 }
 
-.coord-tip:hover, .coordination-card:hover a .coord-icon.coord-tip{
+.coord-tip:hover,
+.coordination-card:hover a .coord-icon.coord-tip {
     background-image: url(../image/tip-box-hover.svg)
 }
 
-.coord-grant{
-    width: 179px; 
-    height:160px;
-    background-image: url(../image/grant-box.svg)}
-.coord-grant:hover, .coordination-card:hover a .coord-icon.coord-grant{
+.coord-grant {
+    width: 179px;
+    height: 160px;
+    background-image: url(../image/grant-box.svg)
+}
+
+.coord-grant:hover,
+.coordination-card:hover a .coord-icon.coord-grant {
     background-image: url(../image/grant-box-hover.svg)
 }
 
@@ -715,7 +734,8 @@ hr {
     background-image: url(../image/token-stream-box.svg)
 }
 
-.coord-tokenstream:hover, .coordination-card:hover a .coord-icon.coord-tokenstream{
+.coord-tokenstream:hover,
+.coordination-card:hover a .coord-icon.coord-tokenstream {
     background-image: url(../image/token-stream-box-hover.svg)
 }
 
