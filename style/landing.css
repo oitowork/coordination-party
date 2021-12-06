@@ -49,15 +49,203 @@ body {
 
 header {
     display: flex;
-    max-width: 100%;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-between;
+
+    margin-top: 63px;
+    padding-left: 60px;
+    padding-right: 68px;
 }
 
-nav {
+.coordination-logo {
     display: flex;
-    justify-items: center;
-    align-items: center;
+    place-items: center;
 }
+
+.coordination-logo h1 {
+    margin-left: 16px;
+
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: normal;
+    text-align: center;
+    font-family: 'Space Mono', monospace, sans-serif;
+
+    color: #FFFFFF;
+}
+
+/* Nav */
+.schelling-nav {
+    z-index: 1;
+    font-family: 'Space Mono', monospace, sans-serif;
+
+    position: relative;
+    display: inline-block;
+}
+
+.title-nav {
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+    width: 246px;
+    height: 66px;
+    background: #261263;
+    padding-left: 32px;
+    padding-right: 18px;
+    position: relative;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+}
+
+.schelling-nav input:after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition-duration: 0.2s;
+    -webkit-transform: scaleX(0);
+    -webkit-transform-origin: bottom left;
+    -webkit-transition-duration: 0.2s;
+}
+
+.schelling-nav input {
+    top: 0;
+    opacity: 0;
+    display: block;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    z-index: 999;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.schelling-nav input:hover {
+    cursor: pointer;
+}
+
+.schelling-nav input:hover~.title-nav {
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+}
+
+.schelling-nav input:checked:after {
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+}
+
+.schelling-nav input:checked~.schelling-menu {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+}
+
+.schelling-nav input:checked~.title-nav img {
+    transform: rotate(180deg);
+}
+
+.title-nav span {
+    color: #C9B8FF;
+    font-size: 18px;
+}
+
+.title-nav img {
+    transition: transform 0.3s;
+}
+
+.schelling-menu {
+    width: 246px;
+    background: #261263;
+    display: block;
+    position: absolute;
+    height: auto;
+    transform: scaleY(0);
+    transform-origin: top left;
+    transition-duration: 0.2s;
+    -webkit-transform: scaleY(0);
+    -webkit-transform-origin: top left;
+    -webkit-transition-duration: 0.2s;
+}
+
+.schelling-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.schelling-menu li {
+    padding-left: 32px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    word-break: keep-all;
+    white-space: nowrap;
+    display: block;
+    position: relative;
+}
+
+.schelling-menu li:first-child {
+    border-top: 6px solid #0E0333;
+}
+
+.schelling-menu li:nth-last-child(n+2) {
+    border-bottom: 2px solid #0E0333;
+}
+
+.schelling-menu a {
+    display: flex;
+    position: relative;
+    text-decoration: none;
+
+    color: #C9B8FF;
+}
+
+.schelling-menu a .wrapper-img {
+    width: 34px;
+    height: 34px;
+}
+
+.schelling-menu a .wrapper-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.schelling-menu a span {
+    display: block;
+    position: relative;
+    margin-left: 24px;
+    font-size: 18px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+}
+
+.schelling-menu a:hover:before {
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+}
+
+.schelling-menu a:hover span {
+    color: white;
+}
+
+/* end Nav */
+
+
+
+
 
 a {
     outline: none;
@@ -150,17 +338,18 @@ main {
     font-family: 'Space Mono', monospace, sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 64px;
+    font-size: 50px;
+    line-height: 45px;
     color: #FFCC00;
     text-align: center;
-    margin-bottom: 4px;
 }
 
 .coordination-party-hero-description .subtitle {
     font-family: Poppins, sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 44px;
+    font-size: 30px;
+    line-height: 45px;
     color: #6F3FF5;
     text-align: center;
 }
@@ -512,6 +701,13 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background-image: url('../image/bg-coordination.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+
+    margin-bottom: 110px;
 }
 
 .review-coordination .review-card .review-title {
@@ -917,10 +1113,14 @@ hr {
 
 @media (max-width: 760px) {
     header {
-        margin: 0;
+        margin: 16px 0;
         display: flex;
         flex-direction: column;
+
         justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 24px;
     }
 
     .coordination-party-hero-description .title {
@@ -951,6 +1151,11 @@ hr {
 
 
 @media (max-width: 540px) {
+    header {}
+
+    .coordination-logo {
+        flex-direction: column;
+    }
 
     .schelling-hero-description .title,
     .hero-image,
@@ -1043,6 +1248,16 @@ hr {
 }
 
 @media (max-width: 440px) {
+    header {
+        padding: 0 2%;
+    }
+
+    .schelling-nav .title-nav,
+    .schelling-menu {
+
+        width: 80vw;
+    }
+
     .header-nav-menu {
         flex-direction: column;
     }
