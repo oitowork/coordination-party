@@ -3,7 +3,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-#alpha_warning{
+
+#alpha_warning {
     text-align: center;
     margin-top: 30px !important;
 }
@@ -745,15 +746,16 @@ hr {
 }
 
 .coordination-box-list {
+    max-width: 1290px;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    gap: 30px 100px;
-    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin: 0 auto;
 }
 
 
 .coordination-box-list li {
+    max-width: 400px;
     justify-content: center;
     text-align: center;
     list-style: none;
@@ -761,50 +763,14 @@ hr {
 }
 
 
-
-.coordination-box-list li:nth-child(1) {
-    grid-area: 1 / 1 / 3 / 3;
-}
-
-.coordination-box-list li:nth-child(2) {
-    grid-area: 1 / 3 / 3 / 5;
-}
-
-.coordination-box-list li:nth-child(3) {
-    grid-area: 1 / 5 / 3 / 7;
-}
-
-.coordination-box-list li:nth-child(4) {
-    grid-area: 3 / 1 / 5 / 3;
-    justify-self: end;
-
-}
-
-.coordination-box-list li:nth-child(5) {
-    grid-area: 3 / 3 / 5 / 5;
-    justify-self: start;
-
-}
-
-.coordination-box-list li:nth-child(6) {
-    grid-area: 3 / 5 / 5 / 7;
-    justify-self: start;
-
-}
-.coordination-box-list li:nth-child(7) {
-    grid-area: 5 / 1 / 5 / 3;
-    justify-self: start;
-
-}
-
-.partyon{
+.partyon {
     color: white;
 }
 
 .coordination-card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     width: 400px;
     height: 300px;
     background-color: rgba(111, 63, 245, 0.2);
@@ -812,6 +778,29 @@ hr {
     align-items: center;
     cursor: pointer;
     transition: background-color 0.75s;
+}
+
+
+
+.coordination-card:hover .coord-icon {
+    display: none;
+}
+
+
+
+.coordination-svg-anime {
+    max-width: 280px;
+    display: block;
+}
+
+
+
+.coordination-svg-anime svg {
+    cursor: pointer;
+}
+
+.coordination-card:hover .coordination-svg-anime {
+    display: block;
 }
 
 .coordination-card_title {
@@ -896,12 +885,14 @@ hr {
 
 /* SVG Icons Hover */
 .coord-icon {
-    display: inline-block;
+    display: none;
     width: 118px;
     height: 160px;
     background-size: cover;
     transition: background-image .3s ease-in;
 }
+
+
 
 
 .coord-pay {
@@ -999,40 +990,6 @@ hr {
 
 /* Responsive Style */
 
-@media (max-width: 1420px) {
-    .coordination-box-list {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-        gap: 0;
-    }
-
-    .coordination-box-list li:nth-child(1) {
-        grid-area: 1 / 1 / 3 / 3;
-    }
-
-    .coordination-box-list li:nth-child(2) {
-        grid-area: 1 / 3 / 3 / 5;
-    }
-
-    .coordination-box-list li:nth-child(3) {
-        grid-area: 3 / 1 / 5 / 3;
-    }
-
-    .coordination-box-list li:nth-child(4) {
-        grid-area: 3 / 3 / 5 / 5;
-        justify-self: center;
-
-    }
-
-    .coordination-box-list li:nth-child(5) {
-        grid-area: 5 / 2 / 5 / 4;
-        justify-self: center;
-        margin-top: 30px;
-
-    }
-
-}
 
 @media (max-width: 1280px) {
 
@@ -1101,39 +1058,7 @@ hr {
     }
 }
 
-@media (max-width: 900px) {
-    .coordination-box-list {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, 1fr);
-        gap: 20px;
-    }
 
-    .coordination-box-list li:nth-child(1) {
-        grid-area: 1 / 1 / 2 / 2;
-    }
-
-    .coordination-box-list li:nth-child(2) {
-        grid-area: 2 / 1 / 3 / 2;
-    }
-
-    .coordination-box-list li:nth-child(3) {
-        grid-area: 3 / 1 / 4 / 2;
-    }
-
-    .coordination-box-list li:nth-child(4) {
-        grid-area: 4 / 1 / 5 / 2;
-        justify-self: center;
-
-    }
-
-    .coordination-box-list li:nth-child(5) {
-        grid-area: 5 / 1 / 6 / 2;
-        justify-self: center;
-        margin-top: 0px;
-    }
-
-}
 
 @media (max-width: 760px) {
     header {
@@ -1175,7 +1100,6 @@ hr {
 
 
 @media (max-width: 540px) {
-    header {}
 
     .coordination-logo {
         flex-direction: column;
@@ -1211,8 +1135,12 @@ hr {
     }
 
     .coordination-card {
-        width: 85vw;
+        width: 300px;
         height: 250px;
+    }
+
+    .coordination-box-list li {
+        width: 300px;
     }
 
     .review-coordination {
@@ -1278,11 +1206,31 @@ hr {
 
     .schelling-nav .title-nav,
     .schelling-menu {
-
         width: 80vw;
     }
 
     .header-nav-menu {
         flex-direction: column;
+    }
+
+    .coordination-box-list {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 340px) {
+    .coordination-box-list {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .coordination-card {
+        width: 250px;
+        height: 250px;
+    }
+
+    .coordination-box-list li {
+        width: 250px;
     }
 }
